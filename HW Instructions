@@ -1,0 +1,106 @@
+# BCIS-3630-HW-3
+ JAVA THREE (Loops) – 30 points From Gaddis Chapter 4
+A. 23.2-Lawn Company Payroll (10.8 Points)
+The owner of a lawn maintenance company has asked you to write a program that totals employee pay. Write a program that uses the ‘DO WHILE’ loop (pg 204) to do the following:
+In the do while loop, ask the user for these five variables: employee number, gross pay, state tax, federal tax, and FICA withholding. Keep looping and summing the values until the employee number is 0 (this is a sentinel value pg 219). After the data is entered for all employees, the program should display totals for gross pay, state tax, federal tax, FICA withholding, and net pay (gross minus tax - the other variables). You may use Scanner or JOptionPane to gather and display your data.
+    Sample input (this is the data I entered, don't print it):
+EE# Gross
+0001 450.00
+0002 515.00
+0003 375.00
+0004 625.00
+State Tax 45.00 51.50 37.50 62.50
+Fed Tax 90.00 103.00 65.00 125.00
+FICA 27.90 31.93 23.25 38.75
+Sample output (print this) for the data entered: Gross: $ 1,965.00
+State Tax: $ 196.50
+Fed Tax: $ 383.00
+FICA Tax:   $   121.83
+Net Amount: $ 1,263.67
+Hints/Tips:
+● Don’t worry about aligning the numbers if you use JOptionPane for the output, but you should format them using String.format (pg 172).
+● If you align the numbers using System.out.printf (pg 160), start by testing only one employee to work out the alignment, then you can do more (see the Sample data) to make sure the math works.
+● To achieve the alignment shown in the Sample output, I used %,9.2f (pg 163).
+● You can use parse (pg 96) with JOptionPane to get input in one line of code
+(but don’t have to)
+
+ ● The employee number and details will not be printed since we’re only printing totals (notice the difference between the input and output above. We’re only displaying the output.
+● I put my first request for the employee number before the loop, so I could ask for the amounts in the loop, then ask for the employee number. This is a use of logic so we don’t have to ask for the amounts after the user enters 0 for the employee number.
+● It took me almost 30 minutes Rubric:
+● Doesn’t use the do while loop -100% (no credit for this part of the assignment)
+● Doesn’t ask for all the variables -20% (-4% for each variable)
+● Doesn’t print the totals -20%
+● The loop doesn’t work -40%
+● Doesn’t use a Sentinel -10%
+● Code is not properly formatted (indents, curly braces are aligned) -5%
+*** This assignment is the proprietary property of The University of North Texas. You do NOT have permission to send it to anyone, especially a company like Chegg.com that writes programs and posts them on the Internet. That is a violation of copyright laws that can be grounds for prosecution.
+B. 23.2-Salary Increase (9.6 Points)
+Write a java program that uses the for loop (pg 207) to print your annual salary amount if you get an annual raise for a specified number of years at a specified percentage. The program should ask the user for the beginning salary, the number of years to calculate, and the percentage of raise each year. The program should then use the for loop to display the current salary, the amount of increase, and the ending salary by calculating the amount of increase as current salary times the percentage. Use System.out.printf (pg165-166) to display the results with formatted numbers and plan for the salary to get over $100,000 in the columns. Show two decimals in your output.
+Example for 6 years starting at $85,000 and increasing by 3% per year (data entered to print the following):
+Year Beg Salary Increase End Salary
+  1   $ 85,000.00 $ 2,550.00  $ 87,550.00
+  2   $ 87,550.00 $ 2,626.50  $ 90,176.50
+  3   $ 90,176.50 $ 2,705.30  $ 92,881.80
+  4   $ 92,881.80 $ 2,786.45  $ 95,668.25
+  5   $ 95,668.25 $ 2,870.05  $ 98,538.30
+
+   6   $ 98,538.30 $ 2,956.15  $101,494.45
+Hints/Tips:
+● Logically figure out which numbers should be integers or doubles
+● Print the column headings before the loop and make them align with the
+numbers.
+● Tell the user how to input the percent (ex: 3 = 3% or .03 = 3%). If they input 3
+for 3%, then you need to divide by 100 in your code. Generally, you want to
+make it as easy for the user as possible (that’s thinking like a designer).
+● In the loop you need to calculate the increase and the new salary before the
+display. Then, you need to set the current salary to the new salary after the
+display.
+● Since we’re not printing any text in the detail lines, other than the dollar sign,
+everything in the quotes will be about formatting the numbers that go into the columns. Finally, the variables will follow the quote and will be plugged into the display for each %.
+● Use \t to tab your columns and headings. If they don’t line up, then add \t in front of the one that needs to move to the right. It takes trial and error to get it right.
+● It took me about than 15 minutes, but the logic that was easy to me will be challenging for you, though I gave you hints.
+Rubric:
+● Doesn’t use the for loop to create output -100% (no credit for this part of the assignment)
+● Doesn’t calculate the correct increase (rounding) -10%
+● Doesn’t calculate the correct increase (otherwise) -30%
+● Doesn’t loop the correct number of times -10%
+● Doesn’t get the first or last line correct -20%
+● Doesn’t ask the user for the required input fields -20%
+● Doesn’t display the results -40%
+● Code is not properly formatted (indents, curly braces are aligned) -5%
+*** This assignment is the proprietary property of The University of North Texas. You do NOT have permission to send it to anyone, especially a company like Chegg.com that writes programs and posts them on the Internet. That is a violation of copyright laws that can be grounds for prosecution.
+C. 23.2-Customer Complaint Log (9.6 Points)
+Write a java program that tracks customer complaints using the while loop (pg 200). Use JOptionPane to ask the user if there are Customer Complaints. Create a while loop
+ 
+ that asks the user for the product, the date, the complaint. After the data has been entered, display the details using System.out.printf(). In the loop, use an accumulator (pg 217) that tracks how many complaints were logged. Then, ask the user if there are more complaints. Loop until the user says there are no more complaints. After the loop, print the total number of complaints.
+Example (data entered and printed):
+ Product
+Coffee Maker
+complete
+Table and Chairs
+is torn
+Winter Jacket
+  Date    Complaint
+01/22/23  Turns off before brewing is
+01/15/23  Table is scratched and chair
+                         01/12/23  Wrong Size
+There were 3 complaints logged
+Hints/Tips:
+Rubric:
+○ Put an if test before the loop to know whether to print column headings or not. Put the column headings before the loop (you don’t want them to print every time you loop).
+○ When you print, use printf for the Strings. You can put %-25s (pg 171) to take up 25 characters before printing the next value (%25s will right justify the text). Use the \t escape sequence between fields to help line them up.
+○ You need variables for the fields mentioned, the complaint count, and the user’s response.
+○ If there are no complaints, it shouldn’t get into the loop.
+○ On my question to ask if there were complaints, I put
+.toUpperCase() after the last parenthesis of JOptionPane so I could
+enter y or Y or n or N and it would always give me Y or N.
+○ It took me just over 26 minutes to complete.
+● Doesn’t use the while loop to create output -100%
+● Doesn’t exit the loop – 30%
+● Doesn’t ask if there complaints initially – 10%
+● Doesn’t ask for all three fields -10% per field
+● Doesn’t create the report -20%
+● Doesn’t do System.exit(0) for JOptionPane -.01
+● Doesn’t accumulate how many are complaints and report it -20%
+
+ ● Code is not properly formatted (indents, curly braces are aligned) -5%
